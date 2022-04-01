@@ -1,0 +1,24 @@
+// Place all the styles related to the likes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.post_actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .other_actions {
+      display: flex;
+      img {
+          margin-right: 6px;
+      }
+    }
+
+    .likes_actions {
+        display: flex;
+
+        img {
+            margin-right: 6px;
+        }
+    }
+}

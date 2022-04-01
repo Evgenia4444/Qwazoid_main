@@ -1,0 +1,43 @@
+
+
+<div class="userpage_header">
+    
+
+        <div class="userpage_icon">
+          <%= image_tag(@user.userpick.url, alt: 'Image') if @user.userpick? %>
+          
+        </div>
+    <div class="userpage_header_data">
+        <div class="user_nameandaction">
+        <% if user_signed_in? && current_user.isadmin == true %>
+    <p>Admin <%= @user.isadmin %></p>
+    <% end %>
+            <p class='userheader_username'> <%= @user.username %></p>
+            
+            <% if user_signed_in? && @user.id == current_user.id %>
+            <%= link_to 'Редактировать профиль', edit_user_registration_path %>
+             <% end%>
+        </div>
+        <div class="userpage_statistics">
+           <% if user_signed_in?  && current_user.followees.include?(@user) %>
+            <button><%= link_to "Unfollow", unfollow_user_path, method: "POST" %></button>
+            <% elsif user_signed_in? && @user != current_user %>
+             <button><%= link_to "Follow", follow_user_path, method: "POST" %></button>
+            <% end%>
+            <p>Подписчики <%= @user.followers.count %> </p>
+<p>Подписки <%= @user.followees.count %></p>
+
+
+        </div>
+        In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
+        <% @posts.each do |post| %>
+          <br><%= link_to post.content, post %>
+        <% end %>
+
+    </div>
+
+     
+</div>
+
+
+

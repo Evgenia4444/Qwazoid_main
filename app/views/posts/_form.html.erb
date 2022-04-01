@@ -1,0 +1,51 @@
+
+
+<div class="postspage">
+  <div class="postspage_container">
+  
+  
+
+        <div class="form">
+
+
+        <%= form_with(model: post) do |form| %>
+        <% if post.errors.any? %>
+        <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% post.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+        <% end %>
+        </ul>
+        </div>
+        <% end %>
+
+
+        <div class="registrationfield">
+        <p>Текст поста <%= form.label :content %></p>
+        <%= form.text_area :content, :class => 'content_input' %>
+        </div>
+
+        <div class="registrationfield">
+            <%= form.label :category_id %>
+            <%= form.select :category_id, Category.pluck(:name, :id) %>
+        </div>
+
+        <div class='registrationfield'>
+            <%= form.label :image %>
+            <%= form.file_field :image %>
+        </div>
+
+        <div class="actions">
+        <button class='submitcreate_btn' >Создать пост <%= form.submit %></button>
+        </div>
+        <% end %>
+
+        </div>
+  
+  </div>
+</div>
+
+
+

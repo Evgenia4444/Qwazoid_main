@@ -1,0 +1,13 @@
+
+
+
+
+<%= link_to 'Создать пост', new_post_path, :class => 'createpost_btn' %>
+
+<div class="website_content">
+  <%= react_component 'Posts', {posts: @posts, categories: @categories, category: @category, users: @users} %>
+  <%= react_component 'Categories', {categories: @categories} %> 
+</div>
+
+
+

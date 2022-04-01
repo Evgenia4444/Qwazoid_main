@@ -1,0 +1,388 @@
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap';
+@import 'reset.css';
+
+
+
+
+
+  
+.postspage{
+    background-color: white;
+    display: flex;
+     height: 100vh;
+     width: 100%;
+     padding: 40px 0px;
+     font-family: 'Open Sans', sans-serif;
+     
+   &_container {
+    width: 60%;
+      
+
+       .post_creation_action {
+           float: right;
+           background-color: #C4C4C4;
+           color: #1B1D1A;
+           font-size: 16px;
+           border: none;
+           border-radius: 2px;
+           padding: 8px 16px;
+           margin-bottom: 24px;
+       }
+       
+   }
+}
+
+
+.post {
+    width: 650px;
+    background-color: #C4C4C4;
+    margin-bottom: 40px;
+
+    &_contentFull {
+
+        
+        padding: 24px 56px 56px;
+        font-family: 'Open Sans', sans-serif;
+        color: #1B1D1A;
+    }
+
+    &_additional {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+
+        button {
+            text-decoration: none;
+            color: #1B1D1A;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #1B1D1A;
+
+            &:hover {
+                color: #1B1D1A;
+            }
+        }
+        
+       
+    }
+
+    &_author {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
+
+    &_content {
+        font-size: 22px;
+        font-weight: regular;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    &_actions {
+        text-decoration: none;
+        float: right;
+        
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #1B1D1A;
+
+        button {
+            text-decoration: none;
+            color: #1B1D1A;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #1B1D1A;
+
+            &:hover {
+                color: rgba($color: #1B1D1A, $alpha: 0.6);
+            } 
+        }
+        
+    }
+}
+
+.comments {
+    
+    background-color: #1B1D1A;
+    width: 100%;
+
+    &_action {
+        display: flex;
+        justify-content: space-between;
+    }
+
+   
+
+}
+
+
+
+
+
+
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.postspage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  background: #DDD9D9;
+  padding: 20px 28px;
+  border-radius: 20px;
+
+  .createpost_btn {
+     float: right;
+     max-width: 100px;
+     margin-bottom: 30px;
+     padding: 20px 24px;
+     background: #EFEFEF;
+  }
+}
+.postspage_container {
+  width: 100%;
+  display: flex;
+
+}
+
+
+.postsfeed {
+  display: flex;
+  flex-direction: column;
+}
+
+.post_content {
+  margin-top: 33px;
+
+  img {
+    margin-top: 14px;
+    max-width: 300px;
+  }
+  
+}
+
+
+
+.post_container {
+  width: 620px;
+  background-color: #EFEFEF;
+  padding: 21px 22px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  border-radius: 6px;
+  
+
+}
+
+.post_data {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  
+  p {
+    font-size: 26px;
+    margin: 0;
+    font-weight: bold;
+  }
+ a {
+   margin-left: 10px;
+   color: black;
+ }
+ .user_username {
+  font-size: 32px;
+  margin: 0;
+}
+
+}
+
+.post_content {
+  margin-top: 33px;
+  
+}
+
+
+
+.post_secondary {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    .category_name {
+     background: #020303;
+     padding: 12px 20px;
+     border-radius: 4px;
+     color: #ffffff;
+
+     a {
+      color: white;
+    }
+    }
+  
+
+}
+
+
+.like_btn {
+  background-color: #020303;
+  padding: 4px;
+  border-radius: 6px;
+  outline: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+// form
+
+.form {
+  width: 650px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  background-color: #EFEFEF;
+  margin: 50px auto;
+  border-radius: 2px;
+  border-radius: 16px;
+
+  .field {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 24px;
+     
+    p{
+      font-size: 22px;
+      color: #020303;
+
+    }
+
+    input {
+      background-color: #D82C2C;
+      width: 100%;
+      border-radius: 2px;
+      height: 56px;
+      outline: none;
+    }
+  }
+
+  .actions {
+    .submitcreate_btn {
+      background: #020303;
+      padding: 16px 22px;
+    }
+
+  
+      &:hover {
+          color: rgba($color: #1B1D1A, $alpha: 0.6);
+      } 
+    }
+  }
+
+.content_input {
+  width: 100%;
+  
+}
+
+
+.postspage_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+ 
+}
+// categories
+
+.categories_list {
+  justify-content: end;
+  max-height: 196px;
+  align-items: center;
+  margin-left: 20px;
+}
+.categories_header {
+  display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+.category_btn {
+  background-color: #EFEFEF;
+  padding: 8px 18px;
+  max-height: 32px;
+  outline: none;
+  border-radius: 4px;
+  color: black;
+  cursor: pointer;
+  
+}
+
+
+
+
+
+// notadmin
+
+.postspage_notadmin {
+  background: white;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+
+  .createpost_btn {
+    max-height: 24px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+  }
+}
+
+.userpost_container {
+  
+  margin-bottom: 40px;
+}
+
+
+
+
+.postshow_page {
+  display: flex;
+  padding: 20px;
+
+    .postshow_post {
+      padding: 20px;
+      
+      width: 70%;
+    
+    }
+
+    .postshow_sideislands {
+      width: 340px;
+
+      
+  }
+}
+
+
+.postfull_page--container {
+  width: 70%;
+  align-items: center;
+}
+
+ 
+.comments_section {
+  margin-top: 40px;
+  background: #ffffff;
+  border-radius: 8px;
+  width: 70%;
+}

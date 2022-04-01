@@ -1,0 +1,37 @@
+
+<div class="postshow_page">
+
+    <div class="postshow_post">
+
+        <div class="postfull_page--container">
+        <%= react_component 'PostFull', { post: @post, user: @user, category: @post.category, username: @post.user.username, likes: @likes } %>
+        </div>
+        
+        
+        <div class="comments_section">
+        <div>
+
+
+
+
+</div>
+        <%= react_component 'Input', { post: @post, user: @user, category: @category, username: @post.user.username, likes: @likes } %>
+        <%= react_component 'CommentOfUser', { post: @post, user: @user, category: @category, username: @post.user.username, likes: @likes, commentt: @commentt } %>
+        
+    
+        </div>
+        
+        
+        
+        </div>
+        
+        
+        <div class="postshow_sideislands">
+        <%= react_component 'Categories', { post: @post, categories: @categories, username: @post.user.username, likes: @likes, commentt: @commentt } %>
+
+       
+
+    </div>
+
+
+</div>

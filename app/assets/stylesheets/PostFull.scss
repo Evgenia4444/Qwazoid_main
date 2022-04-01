@@ -1,0 +1,24 @@
+.postfull {
+
+    width: 720px;
+    padding: 20px;
+    background-color: aqua;
+    border-radius: 10px;
+    background: #ffffff;
+    font-size: 16px;
+
+    p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .user_info {
+        margin-bottom: 25px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .post_actions {
+        margin-top: 30px;
+    }
+}
+

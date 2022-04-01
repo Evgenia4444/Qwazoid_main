@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conspiracy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+  
+  
+
+  <div class="navbar">
+	<% Category.where(display_in_navbar: true).each do |cat| %>
+    <%= link_to cat.name, posts_path(category: cat.id) %> |
+    <% end %>
+  
+    
+    <%= link_to "Reset", posts_path %>
+    <% Category.where(display_in_navbar: true).each do |cat| %>
+    <%= link_to cat.name, request.params.merge(category: cat.id) %> |
+    <% end %>
+  
+   
+    
+
+
+
+    <%= form_tag posts_path,  class: "search_form", :method => 'get' do %>
+      <p>
+        <%= text_field_tag :starts_with, params[:starts_with] %>
+        <%= submit_tag "Поиск", class: "search_btn", :name => nil %>
+      </p>
+    <% end %>
+
+
+
+  <ul class="navbar_links">
+    <li>
+    <% if user_signed_in? && current_user.isadmin == true%>
+      <%= link_to "Мастерская", admin_path,
+      class: "link link--black" %>
+    <% end %>
+    </li>
+  <% if user_signed_in? %>
+    <li>
+      <%= link_to 'Профиль', current_user,
+      class: "link link--black" %>
+    </li>
+  
+    <li>
+    <%= link_to 'Выйти', destroy_user_session_path,
+    class: "link link--black", method: :delete  %>
+    </li>
+
+  <% else %>
+    <li>
+      <%= link_to 'Войти', new_user_session_path,
+      class: "link link--black" %>
+    </li>
+    <li>
+      <%= link_to 'Регистрация', new_user_registration_path,
+      class: "link link--black" %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+
+
+
+
+<%= yield %>
+
+
+  </body>
+</html>

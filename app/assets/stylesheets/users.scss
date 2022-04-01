@@ -1,0 +1,123 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.userpage_header {
+    width: 1200px;
+    
+    height: 250px;
+    display: flex;
+    
+
+
+    .userpage_icon {
+        border-radius: 100px;
+        background-color: pink;
+        width: 200px;
+        height: 200px;
+        margin-right: 40px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    &_data {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+
+    }
+    
+}
+
+
+.user_nameandaction {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    a {
+        color: black;
+    }
+
+}
+
+.userpage_statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        background-color: #c4c4c4;
+        padding: 22px 36px;
+        border-radius: 20px;
+        border: none;
+        color: black;
+        cursor: pointer;
+        margin-right: 60px;
+        
+
+        &:active,
+        &:focus {
+            color: black;
+        }
+    }
+
+    p {
+        margin-right: 60px;
+    }
+}
+
+
+.users_container {
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 100%;
+    
+
+
+}
+
+.users_header {
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0 60px 20px;
+    background: #1a1919;
+    color: white;
+    align-items: center;
+
+    p {
+        
+        width: 200px;
+    }
+}
+
+.users_section {
+    padding: 20px 60px;
+
+    .user_info {
+       
+        display: flex;
+        
+    
+        p {
+            width: 200px;
+        }
+
+        a {
+            color: #020303;
+        }
+    }
+}
+
+
+.userheader_username {
+    font-size: 32px;
+    font-weight: bold;
+}

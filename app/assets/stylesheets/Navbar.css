@@ -1,0 +1,12 @@
+.navbar_container {
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: end;
+}
+
+.navbar_action {
+    padding: 7px 40px;
+    border-radius: 4px;
+    background-color: #B3DAFF;
+}

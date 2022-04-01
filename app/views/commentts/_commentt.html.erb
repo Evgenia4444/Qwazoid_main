@@ -1,0 +1,20 @@
+<div>
+
+<% if user_signed_in? && current_user.id == commentt.user_id  %>
+<p>
+  <%= link_to 'Destroy Comment', [commentt.post, commentt],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>
+<% end %>
+<p>
+  <b>Commenter:</b>
+  <%= User.find(commentt.user_id).email %>
+</p>
+
+<p>
+	<b>Comment:</b>
+	<%= commentt.body %>
+</p>
+
+</div>

@@ -1,0 +1,26 @@
+
+
+<div class="users_container">
+    <div class="users_header">
+    <p>ID</p>
+    <p>E-mail</p>
+    <p>Никнеймы</p>
+    <p>Кол-во постов</p>
+    <p>Действия</p>
+    </div>
+
+    <div class="users_section">
+    
+      <% @users.each do |user| %>
+        <div class='user_info'>
+          <p><%= user.id %></p>
+          <p><%= link_to user.email, user %></p>
+          <p><%= user.username %></p>
+
+          <p><%= Post.where(user_id: user.id).count %></p>
+          <p><%= link_to 'Удалить', user, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить пользователя?' } %></p>
+          
+        </div>
+      <% end %>
+    </div>
+</div>

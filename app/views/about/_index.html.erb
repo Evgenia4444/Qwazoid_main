@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      .section1 {
+        position: relative;
+        margin: 0px;
+        background-color: #1B1D1A;
+        height: 85px;
+        width: 100%;
+      }
+      #grid_section1 {
+        display: grid;
+        grid-template-columns: 62% 1fr 1fr 1fr;
+        grid-template-rows: 85px;
+        grid-gap: 52px;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-top: 0px;
+        margin-bottom: 0px
+      }
+      #grid > div {
+        padding: 0px;
+        /* background: gold; */
+        text-align: left;
+      }
+      .section2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        background-color: #292929;
+        height: 897px;
+        width: 100%;
+      }
+      .section3 {
+        position: relative;
+        margin: 0px;
+        background-color: #D82C2C;
+        background-images: url('img2/setka1.svg');
+        height: 897px;
+        width: 100%;
+      }
+      .section4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 0px;
+        background-color: #292929;
+        height: 897px;
+        width: 100%;
+        display: flex;
+        /* vertical-align: center; */
+        align-items: center;
+        justify-content: center;
+      }
+      .section5 {
+        position: relative;
+        display: flex;
+        margin: 0px;
+        background-color: #292929;
+        height: 940px;
+        width: 100%;
+        flex-direction: column;
+      }
+      .section6 {
+        position: relative;
+        margin: 0px;
+        background-color: #292929;
+        height: 1739px;
+        width: 100%;
+        background-image: url('img2/setka2.svg');
+
+      }
+      .section7 {
+        position: relative;
+        margin: 0px;
+        background-color: #D82C2C;
+        height: 1720px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+      }
+      .section8 {
+        position: relative;
+        display: flex;
+        margin: 0px;
+        background-color: #292929;
+        height: 1992px;
+        width: 100%;
+        flex-direction: column;
+      }
+      .section9 {
+        position: relative;
+        margin: 0px;
+        background-color: #D82C2C;
+        height: 880px;
+        width: 100%;
+        background-image: url('img2/setka3.svg');
+        display: flex;
+        vertical-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .section1_p1 {
+        font-family: Gosha Regular;
+        font-size: 48px;
+        margin-top: 15px;
+        color: #D82C2C;
+      }
+      .section1_p2 {
+        font-family: Gosha Ultralight;
+        font-size: 36px;
+        margin-top: 21px;
+        color: #D82C2C;
+      }
+      .section1_p3 {
+        font-family: Gosha Regular;
+        font-size: 36px;
+        margin-top: 21px;
+        color: #D82C2C;
+      }
+      .section1_p4 {
+        font-family: Gosha Ultralight;
+        font-size: 36px;
+        margin-top: 21px;
+        color: #D82C2C;
+      }
+      .section2_p1 {
+        position: relative;
+        background: url('img2/kva.svg');
+        margin-top: 72px;
+        margin-left: 60px;
+        width: 1320px;
+        height: 299px;
+        /* background-size: contain; */
+        background-repeat: no-repeat;
+      }
+      .section2_p2 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Regular;
+        /* margin-left: 31px; */
+        margin-top: 0px;
+        margin-left: 60px;
+        font-size: 142px;
+        color: #D82C2C;
+      }
+      .section3_p1 {
+        position: relative;
+        display: block;
+        font-size: 140px;
+        font-family: Gosha Regular;
+        margin-left: 60px;
+        top: 101px;
+        color: #292929;
+      }
+    .section3_p2 {
+      position: relative;
+      display: block;
+      /* width: 556px; */
+      font-size: 52.5px;
+      font-family: Gosha Regular;
+      margin-left: 60px;
+      margin-top: 160px;
+      color: #292929;
+    }
+    .section4_block1 {
+      position: relative;
+      background-image: url('img2/block1.svg');
+      width: 1281px;
+      height: 621px;
+      display: flex;
+      flex-direction: column;
+      /* vertical-align: center; */
+      /* align-items: center;
+      justify-content: center; */
+    }
+    .block1_p1 {
+      font-family: Gosha Regular;
+      font-size: 70px;
+      margin: 60px;
+      width: 1148px;
+      color: #292929;
+
+    }
+    .block1_p2 {
+      font-family: Gosha Regular;
+      font-size: 40px;
+      margin-left: 60px;
+      width: 1161px;
+      color: #292929;
+    }
+      .section5_p1 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Regular;
+        font-size: 85px;
+        margin-left: 60px;
+        width: 1319px;
+        color: #C4C4C4;
+      }
+      .section5_p2 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Ultralight;
+        font-size: 40px;
+        margin-left: 60px;
+        margin-top: 60px;
+        width: 1157px;
+        color: #C4C4C4;
+      }
+      .section6_p1 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Regular;
+        font-size: 144px;
+        color: #C4C4C4;
+        margin-left: 60px;
+        top: 60px;
+      }
+      .section6_img1 {
+        background: url('img2/s6i1.svg');
+        position: relative;
+        display: flex;
+        margin-left: 60px;
+        margin-top: 90px;
+        width: 189px;
+        height: 107px;
+        background-repeat: no-repeat;
+      }
+      .section6_img2 {
+        background: url('img2/s6i2.svg');
+        position: relative;
+        display: flex;
+        margin-left: 60px;
+        margin-top: 90px;
+        width: 93px;
+        height: 158px;
+        background-repeat: no-repeat;
+      }
+      .section6_img3 {
+        background: url('img2/s6i3.svg');
+        position: relative;
+        display: flex;
+        margin-left: 60px;
+        margin-top: 90px;
+        width: 174px;
+        height: 173px;
+        background-repeat: no-repeat;
+      }
+      .section6_p2 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Ultralight;
+        font-size: 40px;
+        width: 1281;
+        color: #C4C4C4;
+        margin-left: 60px;
+        margin-top: 50px;
+      }
+
+      .section7_p1 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Regular;
+        font-size: 134px;
+        color: #292929;
+        margin-left: 60px;
+        margin-top: 60px;
+      }
+      .section7_block1 {
+        position: relative;
+        background-image: url('img2/block2.svg');
+        width: 981px;
+        height: 1194px;
+        /* margin-left: 227px; */
+        display: flex;
+        align-self: center;
+      }
+      #grid_section7 {
+        display: grid;
+        grid-template-columns: 253px 728px;
+        grid-template-rows: 351px 265px 235px 150px;
+        grid-gap: 0px;
+        margin-left: 227px;
+        margin-right: 227px;
+        margin-top: 60px;
+        margin-bottom: 0px
+      }
+      #grid > div {
+        padding: 0px;
+        /* background: gold; */
+        text-align: left;
+      }
+      .bp1 {
+        font-size: 144px;
+        font-family: Gosha Regular;
+        color: #292929;
+        margin-left: 122px;
+        margin-top: 60px;
+      }
+      .bp2 {
+        font-size: 40px;
+        font-family: Gosha Ultralight;
+        color: #292929;
+        margin-left: 0px;
+        margin-top: 93px;
+      }
+      .section8_p1 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Regular;
+        font-size: 98px;
+        margin-top: 70px;
+        margin-left: 60px;
+        color: #C4C4C4;
+      }
+      .section8_p2 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Ultralight;
+        font-size: 36px;
+        margin-top: 40px;
+        width: 682px;
+        color: #C4C4C4;
+        margin-left: 60px
+      }
+      .section8_img1 {
+        position: relative;
+        display: flex;
+        background: url('img2/s8i2.png');
+        margin-top: 109px;
+        width: 1173px;
+        height: 1223.5px;
+        margin-left: 132px;
+        align-self: center;
+      }
+      .section9_p1 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Regular;
+        font-size: 98px;
+        margin-top: 0px;
+        margin-left: 60px;
+        color: #292929;
+      }
+      .section9_block1 {
+        position: relative;
+        background-image: url('img2/block3.svg');
+        width: 55.97%;
+        height: 460px;
+        margin-left: 22.015;
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+      .section9_p2 {
+        position: relative;
+        display: flex;
+        font-family: Gosha Regular;
+        font-size: 40px;
+        margin-top: 55px;
+        margin-left: 81px;
+        color: #292929;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="section1">
+      <div id="grid_section1" class="">
+        <div class="section1_p1">квазоид</div>
+        <div class="section1_p2">промо</div>
+        <div class="section1_p3">о нас</div>
+        <div class="section1_p4">посты</div>
+      </div>
+    </div>
+
+    <div class="section2">
+      <div class="section2_p1"></div>
+        <div class="section2_p2">пространство <br> для конспирологов</div>
+      </div>
+
+      <div class="section3">
+        <div class="section3_p1">что такое квазоид?</div>
+        <div class="section3_p2">Квазоид – место, где конспирологи могут <br>общаться, делиться новостями, обсуждать теории <br>и спорить. Это больше, чем медиа-сервис, это <br>тайное контробщество по борьбе с мировыми <br>заговорами, объединяющее энтузиастов-<br>исследователей, решившихся на прыжок <br>в кроличью нору.</div>
+      </div>
+
+      <div class="section4">
+       <div class="section4_block1">
+         <div class="block1_p1">Исследование целевой аудитории</div>
+         <div class="block1_p2">Опросив целевую аудиторию, мы выяснили, что большая часть людей любит читать про конспирологические теории, хотя и не верит в них, и редко, но все-таки спорит на подобные темы. Молодым людям нравится обсуждать конспирологию, но до сих пор у них не было площадки, где они могли бы это делать.</div>
+      </div>
+      </div>
+
+      <div class="section5">
+        <div class="section5_p1">В чём особенность Квазоида?</div>
+        <div class="section5_p2">Медиа-сервис пародирует тайную организацию.
+В нём есть иллюзия иерархии участников
+(от неофитов до просветлённых) и разноуровнего доступа к информации.
+</div>
+        <div class="section5_p2">Например, новичок не может видеть, о чём беседуют пользователи более высокого уровня, для него сообщения находятся под условным грифом “секретно”.</div>
+        <div class="section5_p2">В интерфейсе заложены пасхалки, в случайном порядке пользователи получают дополнительные функции: чат со сверхразумом, стикеры-подсказки, способность видеть то,
+чего не видят другие пользователи: засекреченные страницы
+медиа-сервиса, знаки и послания. А процесс регистрации - ритуальное таинство.</div>
+      </div>
+
+      <div class="section6">
+        <div class="section6_p1">Проблемы</div>
+        <div class="section6_img1"></div>
+        <div class="section6_p2">За всеми глобальными негативными процессами стоит <br>кто-то всесильный и могущественный, которому выгодно <br>портить жизнь другим людям (у них есть план по сокращению <br>населения, порабощению, зомбированию и т.д.)</div>
+        <div class="section6_img2"></div>
+        <div class="section6_p2">Следовательно, кругом все лгут и покрывают друг друга: <br>заговоры фармацевтических компаний, заговоры корпораций, <br>правительств, учёных. Они промыли нам мозги, скрыв истину <br>под тонной ходульных сложных объяснений, <br>чтобы одурачить нас, управлять нами</div>
+        <div class="section6_img3"></div>
+        <div class="section6_p2">Но что я могу противопоставить сильным мира сего? <br>Кто я, а кто они? Конспирология перекладывает <br>ответственность на плечи неуловимого врага.
+</div>
+      </div>
+
+      <div class="section7">
+        <div class="section7_p1">Решения, которые предлагает Квазоид</div>
+        <div class="section7_block1" id="grid_section7">
+          <div class="bp1">1</div>
+          <div class="bp2">Присоединиться к тайной <br>контрорганизации повстанцев, <br>ведущих борьбу с мировыми <br>заговорами под прикрытием <br>нарочитого постмодернизма</div>
+          <div class="bp1">2</div>
+          <div class="bp2">Почувствовать себя <br>исследователем, детективом, <br>охотником на монстров</div>
+          <div class="bp1">3</div>
+          <div class="bp2">Стать частью большой <br>разношёрстной семьи. </div>
+          <div class="bp1">4</div>
+          <div class="bp2">Осознать себя избранным.</div>
+        </div>
+      </div>
+
+      <div class="section8">
+        <div class="section8_p1">Пользователи квазоида, <br>кто они?</div>
+        <div class="section8_p2">Конечно, не считая рептилоидов, которые следят за человечеством, чтобы те не раскрыли их тайну.</div>
+        <div class="section8_img1">
+        </div>
+      </div>
+        <div class="section9">
+          <div class="section9_p1">Функции, <br>доступные пользователям</div>
+            <div class="section9_block1">
+              <div class="section9_p2">Пост</div>
+              <div class="section9_p2">Комментарий</div>
+              <div class="section9_p2">Лайк</div>
+              <div class="section9_p2">ПАЛ (пассивно-агрессивный лайк)</div>
+            </div>
+        </div>
+        <div class="section1">
+          <div id="grid_section1" class="">
+            <div class="section1_p1">квазоид</div>
+            <div class="section1_p2">промо</div>
+            <div class="section1_p3">о нас</div>
+            <div class="section1_p4">посты</div>
+          </div>
+        </div>
+</html>
